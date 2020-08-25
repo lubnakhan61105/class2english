@@ -28,11 +28,11 @@ jobs:
       with:
         node-version: 12
     - usees: borales/actions-yarn@v2.0.0
-       with:
+      with:
        cmd: install
-   - name: build react app
-     run: yarn build
-   - name: install surge
-     run: npm install --global surge
-   - name: deploy to surge
-     run: surge./build lubnakhanclass2.surge.sh --token ${{secrets.
+    - name: build react app
+      run: yarn build
+    - name: install surge
+      run: npm install --global surge
+    - name: deploy to surge
+      run: surge./build lubnakhanclass2.surge.sh --token ${{secrets.token}}
